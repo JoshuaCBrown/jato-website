@@ -8,10 +8,11 @@ import Listen from "./sections/ListenToJato";
 import Watch from "./sections/WatchJato";
 import Press from "./sections/JatoPress";
 import Merch from "./sections/JatoMerch";
+import Footer from "./Footer"
 
 import headerImg from "./imgs/titleheadertwo.png"
 
-import "./App.css";
+import "./style/App.css";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="jatomerch" element={<Merch />} />
         <Route path="jatopress" element={<Press />} />
       </Routes>
+      <Footer />
     </>
   );
 }
