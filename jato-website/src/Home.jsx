@@ -1,11 +1,20 @@
 import { React, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import aboutUsImg from "./imgs/aboutus.png";
-import contactImg from "./imgs/contactjato.png";
-import listenImg from "./imgs/listentojato.png";
+// import aboutUsImg from "./imgs/new/about-scl.png";
+// import contactImg from "./imgs/new/contact-scl.png";
+// import listenImg from "./imgs/new/listen-scl.png";
+// import watchImg from "./imgs/new/watch-scl.png";
+// import merchImg from "./imgs/new/merch-scl.png";
+// import pressImg from "./imgs/new/press-scl.png";
+import aboutUsImg from "./imgs/new/boutitboutit.png";
+import contactImg from "./imgs/new/contactscl.png";
+import listenImg from "./imgs/new/listenscl.png";
 import watchImg from "./imgs/watchjato.png";
-import merchImg from "./imgs/jatomerch.png";
-import pressImg from "./imgs/jatopress.png";
+import merchImg from "./imgs/new/merchscl.png";
+import pressImg from "./imgs/new/pressscl.png";
+
+
+
 
 function Home() {
   const navImgs = [
@@ -54,21 +63,19 @@ function Home() {
   ];
 
   return (
-    <>
-      <div className="homemenu">
-        <ul>
-          {navImgs.map((item) => (
-            <li key={item.imgId}>
-              <div className="navdiv" hovertitle={item.hoverTitle}>
-                <Link to={item.imgLink}>
-                  <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+    <div className="homemenu">
+      <ul>
+        {navImgs.map((item) => (
+          <li key={item.imgId}>
+            <div className="navdiv" hovertitle={item.hoverTitle}>
+              <Link to={item.imgLink}>
+                <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

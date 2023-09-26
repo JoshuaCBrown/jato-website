@@ -7,36 +7,50 @@ import SubscribeBtn from "./SubscribeBtn";
 function Footer() {
   return (
     <>
-      <div className="footer">
-        <ul>
-          <li key="home">
-            <Link to="/">HOME</Link>
-          </li>
-          <li key="about">
-            <Link to="aboutjato">ABOUT</Link>
-          </li>
-          <li key="contact">
-            <Link to="contactjato">CONTACT</Link>
-          </li>
-          <li key="listen">
-            <Link to="listentojato">LISTEN</Link>
-          </li>
-          <li key="look">
-            <Link to="watchjato">LOOK</Link>
-          </li>
-          <li key="merch">
-            <Link to="jatomerch">MERCH</Link>
-          </li>
-          <li key="press">
-            <Link to="jatopress">PRESS</Link>
-          </li>
-        </ul>
+      <div className="footer-container">
+        <div className="footer-spacer"></div>
+        <div className="footer">
+          <ul>
+            <li key="about">
+              <div className="foot-item">
+                <Link to="aboutjato">ABOUT</Link>
+              </div>
+            </li>
+            <li key="contact">
+              <div className="foot-item">
+                <Link to="contactjato">CONTACT</Link>
+              </div>
+            </li>
+            <li key="listen">
+              <div className="foot-item">
+                <Link to="listentojato">LISTEN</Link>
+              </div>
+            </li>
+            <li key="look">
+              <div className="foot-item">
+                <Link to="watchjato">LOOK</Link>
+              </div>
+            </li>
+            <li key="merch">
+              <div className="foot-item">
+                <Link to="jatomerch">MERCH</Link>
+              </div>
+            </li>
+            <li key="press">
+              <div className="foot-item">
+                <Link to="jatopress">PRESS</Link>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-spacer"></div>
+      </div>
+
+      <div className="social-links-div">
+        <SocialLinks />
       </div>
       <div className="subscribe-div">
         <SubscribeBtn />
-      </div>
-      <div className="social-links-div">
-        <SocialLinks />
       </div>
     </>
   );

@@ -1,4 +1,9 @@
 
+div.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  border: red solid 2px;
+}
 div.footer {
   border-top: gray 2px solid;
   border-bottom: black 4px solid;
@@ -8,38 +13,37 @@ div.footer {
 .footer ul {
   display: flex;
   flex-wrap: wrap;
-  /* display: flex; */
-  
-  gap: 10px;
-  justify-content: center;
-  margin: 0 10%;
-  /* justify-content: center; */
+  gap: 5px;
+  justify-content: space-evenly;
   list-style-type: none;
-  /* justify-items: ; */
+  margin: 0;
+  padding: 0;
   border: green solid 3px;
-  /* justify-content: space-evenly; */
-  /* margin-right: 25%;
-  margin-left: 25%; */
-  
-
 }
 
-div.footer li {
-  width: min-content;
+div.footer div {
+  width: 90px;
   font-size: 20px;
   border: 2px black solid;
   text-decoration: underline;
   color: slategrey;
 }
 
+div.social-links-div {
+  width: 50%;
+}
+
 div.social-links-div ul {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 div.social-links-div img {
-  height: 75px;
+  height: 50px;
 }
 
 .subscribe-btn {

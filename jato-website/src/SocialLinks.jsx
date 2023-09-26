@@ -1,8 +1,8 @@
-import apple from "./imgs/svgs/icon_apple.svg";
-import ig from "./imgs/svgs/icon_insta.svg";
-import sc from "./imgs/svgs/icon_sc.svg";
-import spotify from "./imgs/svgs/icon_spotify.svg";
-import yt from "./imgs/svgs/icon_yt.svg";
+import apple from "./imgs/new/apple2.png";
+import ig from "./imgs/new/insta.png";
+import sc from "./imgs/new/soundcloud.png";
+import spotify from "./imgs/new/spotify.png";
+import yt from "./imgs/new/youtube.png";
 
 function SocialLinks() {
   return (
@@ -30,12 +30,15 @@ function SocialLinks() {
           </a>
         </li>
         <li>
-        <a href="https://soundcloud.com/jackandtheother" target="_blank">
+          <a href="https://soundcloud.com/jackandtheother" target="_blank">
             <img src={sc} alt="Soundcloud" />
-            </a>
+          </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/channel/UC7xZN8jHYMpI-s5FBeglUEw" target="_blank">
+          <a
+            href="https://www.youtube.com/channel/UC7xZN8jHYMpI-s5FBeglUEw"
+            target="_blank"
+          >
             <img src={yt} alt="YouTube" />
           </a>
         </li>
