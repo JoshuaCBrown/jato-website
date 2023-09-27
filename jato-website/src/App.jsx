@@ -8,20 +8,19 @@ import Listen from "./sections/ListenToJato";
 import Watch from "./sections/WatchJato";
 import Press from "./sections/JatoPress";
 import Merch from "./sections/JatoMerch";
-import Footer from "./Footer"
-
-import headerImg from "./imgs/titleheadertwo.png"
+import SocialLinks from "./SocialLinks";
+import headerImg from "./imgs/titleheadertwo.png";
 
 import "./style/App.css";
 
 function App() {
   return (
     <>
-    <div className="header">
-      <Link to="/">
-      <img src={headerImg} id="header-img" />
-      </Link>
-    </div>
+      <div className="header">
+        <Link to="/">
+          <img src={headerImg} id="header-img" />
+        </Link>
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="aboutjato" element={<AboutJato />} />
@@ -31,7 +30,11 @@ function App() {
         <Route path="jatomerch" element={<Merch />} />
         <Route path="jatopress" element={<Press />} />
       </Routes>
-      <Footer />
+      <div className="bottom-border">
+        <div className="social-links-div">
+          <SocialLinks />
+        </div>
+      </div>
     </>
   );
 }

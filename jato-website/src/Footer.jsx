@@ -1,7 +1,6 @@
 import React from "react";
 import "./style/Footer.css";
 import { Link } from "react-router-dom";
-import SocialLinks from "./SocialLinks";
 import SubscribeBtn from "./SubscribeBtn";
 
 function Footer() {
@@ -44,13 +43,6 @@ function Footer() {
           </ul>
         </div>
         <div className="footer-spacer"></div>
-      </div>
-
-      <div className="social-links-div">
-        <SocialLinks />
-      </div>
-      <div className="subscribe-div">
-        <SubscribeBtn />
       </div>
     </>
   );

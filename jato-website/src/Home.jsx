@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+  import { React, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 // import aboutUsImg from "./imgs/new/about-scl.png";
 // import contactImg from "./imgs/new/contact-scl.png";
@@ -11,7 +11,7 @@ import contactImg from "./imgs/new/contactscl.png";
 import listenImg from "./imgs/new/listenscl.png";
 import watchImg from "./imgs/watchjato.png";
 import merchImg from "./imgs/new/merchscl.png";
-import pressImg from "./imgs/new/pressscl.png";
+import pressImg from "./imgs/new/press2scl.png";
 
 
 

@@ -2,7 +2,7 @@
 div.footer-container {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  border: red solid 2px;
+  /* border: red solid 2px; */
 }
 div.footer {
   border-top: gray 2px solid;
@@ -18,33 +18,18 @@ div.footer {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border: green solid 3px;
+  /* border: green solid 3px; */
 }
 
 div.footer div {
   width: 90px;
   font-size: 20px;
-  border: 2px black solid;
+  /* border: 2px black solid; */
   text-decoration: underline;
   color: slategrey;
 }
 
-div.social-links-div {
-  width: 50%;
-}
 
-div.social-links-div ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-div.social-links-div img {
-  height: 50px;
-}
 
 .subscribe-btn {
   font-size: 20px;
