@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Home";
 
 import AboutJato from "./sections/AboutJato";
@@ -10,31 +10,34 @@ import Press from "./sections/JatoPress";
 import Merch from "./sections/JatoMerch";
 import SocialLinks from "./SocialLinks";
 import headerImg from "./imgs/titleheadertwo.png";
-
+import AnimatedRoutes from "./AnimatedRoutes";
 import "./style/App.css";
+import { motion } from "framer-motion";
 
 function App() {
   return (
     <>
-      <div className="header">
-        <Link to="/">
-          <img src={headerImg} id="header-img" />
-        </Link>
-      </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="aboutjato" element={<AboutJato />} />
-        <Route path="contactjato" element={<ContactJato />} />
-        <Route path="listentojato" element={<Listen />} />
-        <Route path="watchjato" element={<Watch />} />
-        <Route path="jatomerch" element={<Merch />} />
-        <Route path="jatopress" element={<Press />} />
-      </Routes>
-      <div className="bottom-border">
-        <div className="social-links-div">
-          <SocialLinks />
+    
+        <div className="header">
+          <Link to="/">
+            <img src={headerImg} id="header-img" />
+          </Link>
         </div>
-      </div>
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        className="router"
+      >
+        <AnimatedRoutes />
+        </motion.div> 
+        <div className="bottom-border">
+          <div className="social-links-div">
+            <SocialLinks />
+          </div>
+        </div>
+      
     </>
   );
 }
