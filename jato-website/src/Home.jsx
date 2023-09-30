@@ -66,53 +66,23 @@ function Home() {
   return (
     <div className="homemenu">
       <ul>
-        {hasSelected ? {
-navImgs.map((item) => (
-  <li key={item.imgId}>
-    {(userChoice === item) ? (
-      <motion.div 
-      className="navdiv" 
-      hovertitle={item.hoverTitle}
-      exit={{ justifyself: center }}
-      transition={{ duration: 3 }}>
-        <Link to={item.imgLink}>
-          <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
-        </Link>
-      </motion.div>
-    ) : (
-      <motion.div 
-      className="navdiv" 
-      hovertitle={item.hoverTitle}
-      onClick={(item) => setUserChoice(item)}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}>
-        <Link to={item.imgLink}>
-          <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
-        </Link>
-      </motion.div>
-    )}
-  </li>
-))}
-
-        ) : (
+        {navImgs.map((item) => (
           <li key={item.imgId}>
-          <motion.div 
-          className="navdiv" 
-          hovertitle={item.hoverTitle}
-          onClick={(item) => setUserChoice(item)}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}>
-              <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
-          </motion.div>
-        </li>
-        )}
-        </ul>
+            <motion.div
+              className="navdiv"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              hovertitle={item.hoverTitle}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 3 }}>
+              <Link to={item.imgLink}>
+                <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
+              </Link>
+            </motion.div>
+          </li>
+        ))}
+      </ul>
     </div>
-  );
-}
-
+  )
+};
 export default Home;
