@@ -3,25 +3,29 @@ import { motion } from "framer-motion";
 import "../style/About.css";
 import aboutUsImg from "../imgs/new/boutitboutit.png";
 
+import "./style/About.css"
+
 function AboutJato() {
   // const [rotate, setRotate] = useState(false);
 
   return (
     <>
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: .5 }}
+        className="container"
       >
-        <div>
-          <h1>About Us</h1>
+         <div className="inner">
+        <div className="content-div">
+
+       
+          <img src={aboutUsImg} className="bg-img" />
         </div>
-        <motion.div
-          animate={{ rotate: [0, 200, 150, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="motion"
-        ></motion.div>
+        
+
+        </div>
       </motion.div>
     </>
   );

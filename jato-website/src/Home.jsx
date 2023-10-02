@@ -1,15 +1,9 @@
 import { React, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
-// import aboutUsImg from "./imgs/new/about-scl.png";
-// import contactImg from "./imgs/new/contact-scl.png";
-// import listenImg from "./imgs/new/listen-scl.png";
 import watchImg from "./imgs/new/watchscl.png";
-// import merchImg from "./imgs/new/merch-scl.png";
-// import pressImg from "./imgs/new/press-scl.png";
 import aboutUsImg from "./imgs/new/boutitboutit.png";
 import contactImg from "./imgs/new/contactscl.png";
 import listenImg from "./imgs/new/listenscl.png";
-// import watchImg from "./imgs/watchjato.png";
 import merchImg from "./imgs/new/merchscl.png";
 import pressImg from "./imgs/new/press2scl.png";
 import { motion } from "framer-motion";

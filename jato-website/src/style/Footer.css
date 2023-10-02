@@ -1,13 +1,14 @@
-
 div.footer-container {
+  /* grid-area: footer; */
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  /* border: red solid 2px; */
+  border: red 2px solid;
 }
 div.footer {
   border-top: gray 2px solid;
   border-bottom: black 4px solid;
   width: 100%;
+  border: red solid 2px;
 }
 
 .footer ul {
@@ -28,8 +29,6 @@ div.footer div {
   text-decoration: underline;
   color: slategrey;
 }
-
-
 
 .subscribe-btn {
   font-size: 20px;

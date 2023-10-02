@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Home from "./Home";
 
 import AboutJato from "./sections/AboutJato";
@@ -17,12 +23,12 @@ import { motion } from "framer-motion";
 function App() {
   return (
     <>
-        <div className="header">
-          <Link to="/">
-            <img src={headerImg} id="header-img" />
-          </Link>
-        </div>
-        <motion.div
+      <div className="header">
+        <Link to="/">
+          <img src={headerImg} id="header-img" />
+        </Link>
+      </div>
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -30,13 +36,12 @@ function App() {
         className="router"
       >
         <AnimatedRoutes />
-        </motion.div> 
-        <div className="bottom-border">
-          <div className="social-links-div">
-            <SocialLinks />
-          </div>
+      </motion.div>
+      <div className="bottom-border">
+        <div className="social-links-div">
+          <SocialLinks />
         </div>
-      
+      </div>
     </>
   );
 }
