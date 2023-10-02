@@ -12,7 +12,7 @@ function AboutJato() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 3 }}
+        transition={{ duration: .5 }}
       >
         <div>
           <h1>About Us</h1>

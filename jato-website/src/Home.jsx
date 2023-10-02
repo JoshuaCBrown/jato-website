@@ -3,16 +3,17 @@ import { Link, Route, Routes } from "react-router-dom";
 // import aboutUsImg from "./imgs/new/about-scl.png";
 // import contactImg from "./imgs/new/contact-scl.png";
 // import listenImg from "./imgs/new/listen-scl.png";
-// import watchImg from "./imgs/new/watch-scl.png";
+import watchImg from "./imgs/new/watchscl.png";
 // import merchImg from "./imgs/new/merch-scl.png";
 // import pressImg from "./imgs/new/press-scl.png";
 import aboutUsImg from "./imgs/new/boutitboutit.png";
 import contactImg from "./imgs/new/contactscl.png";
 import listenImg from "./imgs/new/listenscl.png";
-import watchImg from "./imgs/watchjato.png";
+// import watchImg from "./imgs/watchjato.png";
 import merchImg from "./imgs/new/merchscl.png";
 import pressImg from "./imgs/new/press2scl.png";
 import { motion } from "framer-motion";
+import AnimatedNavImg from "./AnimatedNavImg";
 
 function Home() {
   const navImgs = [
@@ -60,29 +61,46 @@ function Home() {
     },
   ];
 
-  const [hasSelected, setHasSelected] = useState(false);
-  const [userChoice, setUserChoice] = useState(null);
+  const [userChoice, setUserChoice] = useState("");
+
+  function clickHandler(itemId) {
+    console.log(itemId);
+    setUserChoice(itemId);
+  }
 
   return (
-    <div className="homemenu">
-      <ul>
-        {navImgs.map((item) => (
-          <li key={item.imgId}>
-            <motion.div
-              className="navdiv"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              hovertitle={item.hoverTitle}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 3 }}>
-              <Link to={item.imgLink}>
-                <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
-              </Link>
-            </motion.div>
-          </li>
-        ))}
-      </ul>
+    <div className="homemenu" key="homemenu">
+      <AnimatedNavImg
+        imgs={navImgs}
+        clickHandler={clickHandler}
+        userChoice={userChoice}
+        
+      />
     </div>
-  )
-};
+  );
+}
 export default Home;
+
+// return (
+//   <div className="homemenu" key="homemenu">
+//     <ul>
+//       {navImgs.map((item) => (
+//         <li key={item.imgId}>
+//           <motion.div
+//             className="navdiv"
+//             onClick={() => clickHandler(item.imgId)}
+//             hovertitle={item.hoverTitle}
+//             key={item.imgId}
+//             layout
+//             transition={{ duration: 1 }}
+//           >
+//             <Link to={item.imgLink}>
+//               <AnimatedNavImg imgSrc={item.imgSrc} imgAlt={item.imgAlt} imgId={item.imgId} userChoice={userChoice} />
+//             </Link>
+//           </motion.div>
+//         </li>
+//       ))}
+//     </ul>
+//   </div>
+// );
+// }

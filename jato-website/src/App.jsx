@@ -17,7 +17,6 @@ import { motion } from "framer-motion";
 function App() {
   return (
     <>
-    
         <div className="header">
           <Link to="/">
             <img src={headerImg} id="header-img" />
