@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import AnimatedNavImg from "./AnimatedNavImg";
 
 function Home() {
-  const navImgs = [
+  const [navImgs, setNavImgs] = useState([
     {
       imgLink: "aboutjato",
       imgSrc: aboutUsImg,
@@ -53,13 +53,21 @@ function Home() {
       imgId: "jatopress",
       hoverTitle: "Press",
     },
-  ];
+  ]);
 
   const [userChoice, setUserChoice] = useState("");
+  const [choiceMade, setChoiceMade] = useState(false);
 
   function clickHandler(itemId) {
+    const newArr = [];
+    const selectedImg = navImgs.find((item) => itemId === item.imgId);
+    newArr.push(selectedImg);
+    console.log(newArr);
+    setNavImgs(newArr);
     console.log(itemId);
     setUserChoice(itemId);
+    setChoiceMade(true);
+
   }
 
   return (
@@ -68,7 +76,7 @@ function Home() {
         imgs={navImgs}
         clickHandler={clickHandler}
         userChoice={userChoice}
-        
+        choiceMade={choiceMade}
       />
     </div>
   );

@@ -2,42 +2,64 @@ import { React, useState } from "react";
 import { motion } from "framer-motion";
 import { Link, Route, Routes } from "react-router-dom";
 
-function AnimatedNavImg({ imgs, clickHandler, userChoice }) {
+function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
   const selectedAnim = {
     exit: { opacity: 0.3 },
-    transition: { duration: 1 },
+    layout: true,
+    transition: { duration: 4 },
   };
 
   const unselectedAnim = {
     exit: { opacity: 0 },
+    transition: { duration: 5 },
   };
 
+  const exitVariant = {
+    opacity: <div className="5"></div>
+  }
+
   const selectedVariant = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
     exit: {
-      opacity: 1,
-      // scale: 1.5, // You can adjust the scale as needed
-      // x: '50%',  // Move the image horizontally to the center of the screen
-      // y: '50%',  // Move the image vertically to the center of the screen
-      // position: "absolute",
+      opacity: 0,
+      duration: 3,
       transition: {
         type: "spring",
-        // damping: 15,
-        stiffness: 100,
-        duration: 1,
+        stiffness: 200,
+        duration: 3,
       },
     },
+    transition: { duration: 4 }
   };
 
   const unselectedVariant = {
     exit: {
       opacity: 0,
-      transition: {
-        type: "spring",
-        damping: 15,
-        stiffness: 100,
-        duration: 1,
-      },
     },
+    transition: {
+      type: "spring",
+      duration: 4,
+    },
+  };
+
+  const itemVisibility = (itemId) => {
+    if (choiceMade === true && userChoice === itemId) {
+      return "selected-li";
+    } else if (choiceMade === true && userChoice !== itemId) {
+      return "hidden-li";
+    } else {
+      return "nav-li";
+    }
+  };
+
+  const customTransition = {
+    type: 'spring',
+    duration: 1,
+  };
+
+  const exitLayout = (itemId) => {
+    return itemId === userChoice ? { opacity: 1, transition: customTransition } : {};
   };
 
   return (
@@ -45,23 +67,28 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice }) {
       {imgs.map((item) => (
         <motion.li
           key={item.imgId}
-          className={userChoice === item.imgId ? "selectednavdiv" : "navdiv"}
+          className={itemVisibility(item.imgId)}
+          // animate="animate"
+
+          // variants={
+          //   item.imgId === userChoice ? selectedVariant : unselectedVariant
+          // }
           layout
-          animate="animate"
-          variants={
-            item.imgId === userChoice ? selectedVariant : unselectedVariant
-          }
-          exit="exit"
-          transition="transition"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          
+          exit={exitLayout(item.imgId)}
+          // transition={{ duration: 3 }}
         >
           <div
-            // className="navdiv"
+            className="navdiv"
             onClick={() => clickHandler(item.imgId)}
             hovertitle={item.hoverTitle}
             key={item.imgId}
           >
             <Link to={item.imgLink}>
-              <motion.img
+            <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
+            {/* <motion.img
                 src={item.imgSrc}
                 className="navimg"
                 alt={item.imgAlt}
@@ -71,8 +98,8 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice }) {
                   userChoice === item.imgId ? selectedAnim : unselectedAnim
                 }
                 exit="exit"
-                transition={{ duration: 1 }}
-              />
+                transition="transition"
+              /> */}
             </Link>
           </div>
         </motion.li>
