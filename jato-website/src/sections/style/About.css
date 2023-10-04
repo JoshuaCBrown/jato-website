@@ -1,9 +1,15 @@
+div {
+  box-sizing: content-box;
+}
+
 .container {
   width: 100%;
+  height: auto;
   max-width: 750px;
   /* border: 2px purple dotted; */
   position: relative;
   display: flex;
+  align-self: stretch;
   align-items: center;
   justify-content: center;
   /* border: red solid 2px; */
@@ -13,12 +19,15 @@
 
 .container .inner {
   position: relative;
+  box-sizing: border-box;
   display: grid;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
+  column-gap: 5%;
   text-align: center;
   align-self: stretch;
 }
@@ -40,31 +49,27 @@
 
 
 .content-div {
-  /* border: orange solid 3px; */
-  position: absolute;
+  /* border: orange solid 3px; *
   width: 100%;
   height: auto;
   /* min-height: max-content; */
   /* align-self: stretch; */
-  justify-self: center;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
   /* align-self: stretch; */
   justify-content: center;
-  justify-self: center;
-  box-sizing: content-box;
+  align-items: center;
+  grid-area: 1 / 1 / -1 / -1;
   /* border: 2px solid black; */
 }
 
 .bg-img {
   width: 100%;
-  max-width: max-content;
+  /* max-width: max-content; */
   height: auto;
-  position: relative;
   opacity: 0.3;
-  box-sizing: content-box;
   /* margin: 10px 0; */
   padding: 0;
   /* border: 1px solid black; */
@@ -101,4 +106,13 @@ div.navdiv {
 .navdiv:hover::before {
   opacity: 100;
   transition: all 0.5s;
+}
+
+@media (height > 1080px) {
+  /* .homemenu ul {
+    grid-template-columns: 1fr 1fr;
+  } */
+  /* .bg-img {
+    width: 20vh;
+  } */
 }

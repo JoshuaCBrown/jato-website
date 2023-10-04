@@ -15,7 +15,7 @@ import Press from "./sections/JatoPress";
 import Merch from "./sections/JatoMerch";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-
+// import "./style/App.css"
 function AnimatedRoutes() {
   const location = useLocation();
   return (

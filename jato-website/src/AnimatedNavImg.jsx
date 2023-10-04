@@ -53,15 +53,6 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
     }
   };
 
-  const customTransition = {
-    type: 'spring',
-    duration: 1,
-  };
-
-  const exitLayout = (itemId) => {
-    return itemId === userChoice ? { opacity: 1, transition: customTransition } : {};
-  };
-
   return (
     <ul>
       {imgs.map((item) => (
@@ -74,17 +65,21 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
           //   item.imgId === userChoice ? selectedVariant : unselectedVariant
           // }
           layout
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          
-          exit={exitLayout(item.imgId)}
+          transition={{
+            layout: {
+              duration: .25,
+              ease: 'easeOut',
+            }
+          }}
+          exit={{ opacity: 1 }}
+          // exit={exitLayout(item.imgId)}
           // transition={{ duration: 3 }}
         >
           <div
             className="navdiv"
             onClick={() => clickHandler(item.imgId)}
             hovertitle={item.hoverTitle}
-            key={item.imgId}
+            key={item.liKey}
           >
             <Link to={item.imgLink}>
             <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />

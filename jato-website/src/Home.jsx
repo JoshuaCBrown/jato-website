@@ -17,6 +17,7 @@ function Home() {
       imgAlt: "About Jack and the Other",
       imgId: "aboutjato",
       hoverTitle: "About",
+      liKey: "aboutLi",
     },
     {
       imgLink: "contactjato",
@@ -24,6 +25,7 @@ function Home() {
       imgAlt: "Contact Jack and the Other",
       imgId: "contactjato",
       hoverTitle: "Contact",
+      liKey: "contactLi",
     },
     {
       imgLink: "listentojato",
@@ -31,6 +33,7 @@ function Home() {
       imgAlt: "Listen to Jack and the Other",
       imgId: "listentojato",
       hoverTitle: "Listen",
+      liKey: "listenLi",
     },
     {
       imgLink: "watchjato",
@@ -38,6 +41,7 @@ function Home() {
       imgAlt: "Watch Jack and the Other",
       imgId: "watchjato",
       hoverTitle: "Look",
+      liKey: "lookLi",
     },
     {
       imgLink: "jatomerch",
@@ -45,6 +49,7 @@ function Home() {
       imgAlt: "Jack and the Other Merchandise",
       imgId: "jatomerch",
       hoverTitle: "Merch",
+      liKey: "merchLi",
     },
     {
       imgLink: "jatopress",
@@ -52,6 +57,7 @@ function Home() {
       imgAlt: "Jack and the Other Press",
       imgId: "jatopress",
       hoverTitle: "Press",
+      liKey: "pressLi",
     },
   ]);
 
@@ -67,7 +73,6 @@ function Home() {
     console.log(itemId);
     setUserChoice(itemId);
     setChoiceMade(true);
-
   }
 
   return (
