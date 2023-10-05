@@ -53,6 +53,16 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
     }
   };
 
+  const imgVisibility = (itemId) => {
+    if (choiceMade === true && userChoice === itemId) {
+      return "selected-img";
+    } else if (choiceMade === true && userChoice !== itemId) {
+      return "hidden-img";
+    } else {
+      return "navimg";
+    }
+  };
+
   return (
     <ul>
       {imgs.map((item) => (
@@ -66,8 +76,9 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
           // }
           layout
           transition={{
+            duration: .5,
             layout: {
-              duration: .25,
+              duration: .5,
               ease: 'easeOut',
             }
           }}
@@ -87,13 +98,14 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
                 src={item.imgSrc}
                 className="navimg"
                 alt={item.imgAlt}
-                enter={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                variants={
-                  userChoice === item.imgId ? selectedAnim : unselectedAnim
-                }
-                exit="exit"
-                transition="transition"
+                layout
+                transition={{
+                  duration: .5,
+                  layout: {
+                    duration: .5,
+                    ease: 'easeOut',
+                  }
+                }}
               /> */}
             </Link>
           </div>

@@ -1,7 +1,5 @@
 import { React, useState } from "react";
 import { motion } from "framer-motion";
-import "../style/About.css";
-import "../style/App.css";
 import aboutUsImg from "../imgs/new/boutitboutit.png";
 
 // import "./style/About.css";
@@ -13,9 +11,15 @@ function AboutJato() {
     <>
       <motion.div
         initial={{ opacity: 1 }}
-        animate={{ opacity: .2 }}
+        animate={{ opacity: .3 }}
+        layout
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ 
+          duration: 1,
+          layout: {
+            duration: 1
+          }
+        }}
         className="container"
       >
         <div className="inner">

@@ -32,14 +32,16 @@ function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 4 }}
         className="router"
       >
         <AnimatedRoutes />
       </motion.div>
-      <div className="bottom-border">
-        <div className="social-links-div">
-          <SocialLinks />
+      <div className="footer">
+        <div className="bottom-border">
+          <div className="social-links-div">
+            <SocialLinks />
+          </div>
         </div>
       </div>
     </>

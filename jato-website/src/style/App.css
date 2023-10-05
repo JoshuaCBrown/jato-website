@@ -67,10 +67,10 @@ div {
   box-sizing: border-box;
 }
 
-.homemenu {
-  /* border: 2px solid orange; */
+.homemenu, 
+.container {
+  /* border: 2px solid green; */
   width: 100%;
-  height: auto;
   max-width: 750px;
   position: relative;
   display: flex;
@@ -82,48 +82,74 @@ div {
   box-sizing: border-box;
 }
 
-.homemenu ul {
+.homemenu>ul,
+.container>.inner {
   /* border: 2px solid white; */
   box-sizing: border-box;
   display: grid;
   align-items: center;
+  /* align-content: center; */
   justify-content: center;
-  list-style-type: none;
   width: 100%;
-  height: auto;
+  align-self: stretch;
   margin: 0;
   padding: 0;
+  text-align: center;
+  overflow: hidden;
+  /* align-self: stretch; */
+}
+
+.homemenu>ul {
+  list-style-type: none;
   column-gap: 5%;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  text-align: center;
   /* align-self: stretch; */
 }
 
 .homemenu li {
-  /* border: orange solid 3px; */
+  /* border: red solid 3px; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: auto;
   /* margin-bottom: -5px; */
   list-style-type: none;
 }
 
-.selected-li {
+.selected-li,
+.content-div {
+
   grid-area: 1 / 1 / -1 / -1;
   /* background-color: red; */
+}
+
+.selected-li>.navdiv>.navimg,
+.bg-img {
+  min-width: 500px;
+  height: auto;
+  /* border: solid 3px black; */
 }
 
 .hidden-li {
   visibility: hidden;
 }
 
-div.navdiv {
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
+.navdiv,
+.content-div {
+  /* border: orange solid 3px; */
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
 }
 
 .selectednavdiv {
@@ -132,31 +158,40 @@ div.navdiv {
   /* grid-area: 1 / 1 / -1 / -1; */
   /* width: 100%;
   height: 100%; */
-  align-self: center;
+  align-self: stretch;
   justify-self: center;
   margin: 0;
   padding: 0;
   display: flex;
+  align-content: center;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
 }
 
-.navimg {
+.navimg,
+.bg-img {
+  display: block;
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  /* object-fit: contain; */
   /* max-width: max-content; */
   /* position: relative; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid black; */
+  /* opacity: 0.5; */
+  /* border: 3px solid black; */
+}
+
+.navimg {
+  opacity: .5;
 }
 
 .navimg:hover {
-  opacity: 0.3;
+  opacity: 1;
   transition: all 0.5s;
 }
 
@@ -170,14 +205,20 @@ div.navdiv {
   opacity: 0;
 }
 
-
-
 .navdiv:hover::before {
   opacity: 100;
   transition: all 0.5s;
 }
 
 
+div.footer {
+  /* border: 3px solid black; */
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 div.bottom-border {
   grid-area: footer;
@@ -187,6 +228,9 @@ div.bottom-border {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: fixed;
+  bottom: 0;
+  /* border: red solid 3px; */
 }
 
 div.social-links-div {
@@ -216,7 +260,7 @@ div.social-links-div img {
 
 @media (height > 1080px) {
   .homemenu ul {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(125px, 20vh));
     align-items: stretch;
   }
   
@@ -225,9 +269,20 @@ div.social-links-div img {
   } */
 }
 
-@media (width < 600px) {
+@media (width < 680px) {
   .homemenu ul {
     grid-template-columns: repeat(2, minmax(125px, 20vh));
+    align-items: stretch;
+  }
+  
+  /* .navimg {
+    width: 20vh;
+  } */
+}
+
+@media (height < 750px) {
+  .homemenu ul {
+    grid-template-columns: repeat(3, minmax(125px, 25vh));
     align-items: stretch;
   }
 }
@@ -240,6 +295,13 @@ div.social-links-div img {
   } */
   .homemenu ul {
     grid-template-columns: repeat(2, minmax(100px, 20vh));
+    align-items: stretch;
+  }
+}
+
+@media (width >= 350) and (height <= 1080 ) {
+  .homemenu ul {
+    grid-template-columns: repeat(2, minmax(90px, 20vh));
     align-items: stretch;
   }
 }

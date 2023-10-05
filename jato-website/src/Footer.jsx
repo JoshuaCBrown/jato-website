@@ -8,7 +8,7 @@ function Footer() {
     <>
       <div className="footer-container">
         <div className="footer-spacer"></div>
-        <div className="footer">
+        <div className="footer-nav">
           <ul>
             <li key="about">
               <div className="foot-item">

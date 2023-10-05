@@ -4,14 +4,14 @@ div.footer-container {
   grid-template-columns: 1fr 4fr 1fr;
   border: red 2px solid;
 }
-div.footer {
+div.footer-nav {
   border-top: gray 2px solid;
   border-bottom: black 4px solid;
   width: 100%;
   border: red solid 2px;
 }
 
-.footer ul {
+.footer-nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -22,7 +22,7 @@ div.footer {
   /* border: green solid 3px; */
 }
 
-div.footer div {
+div.footer-nav div {
   width: 90px;
   font-size: 20px;
   /* border: 2px black solid; */
