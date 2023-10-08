@@ -219,7 +219,7 @@ div {
   width: 100svw;
   /* flex-grow: 1; */
   /* overflow-y: scroll; */
-  background-color:rgba(0, 0, 0, 0.253);
+  background-color:rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   padding: 10px;
   z-index: 1000;
@@ -227,7 +227,7 @@ div {
 
 .jato-content-child {
   height: 80%;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 10px;
 }
 
@@ -251,23 +251,33 @@ div {
   justify-self: center;
 }
 
-.content-title-header button {
-  font-size: 40px;
-  font-weight: bolder;
+.back-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
   padding: 0;
+  border-radius: 50%;
   /* align-self: end; */
-  border: black 1px dotted;
-  height: 4rem;
-  width: 4rem;
+  /* border: black 1px dotted; */
+  height: 75px;
+  width: 75px;
   background-color: transparent;
+}
+
+.back-btn > img {
+  width: 75px;
+  height: auto;
 }
 
 .content-title-header button:hover {
   background-color: rgba(245, 245, 245, 0.2);
+  border: none;
+}
+
+button:active {
+  filter: invert(.3);
+  transform: scale(.95);
 }
 
 /* width */

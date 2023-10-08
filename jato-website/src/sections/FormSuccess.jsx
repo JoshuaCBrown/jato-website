@@ -1,22 +1,18 @@
 import { React, useState } from "react";
-import { motion } from "framer-motion";
 import contactImg from "../imgs/new/contactscl.png";
 // import "./style/About.css";
 import PageDisplay from "./PageDisplay";
-import ContactUsContent from "../sections/content/ContactUsContent";
 
-function ContactJato() {
+
+export default function FormSuccess() {
   // const [rotate, setRotate] = useState(false);
-  const contactUsContent = <ContactUsContent />;
   return (
     <>
       <PageDisplay
         jatoTitle="Contact Us"
-        jatoPage={contactUsContent}
+        jatoPage={"Message Sent!"}
         jatoBg={contactImg}
       />
     </>
   );
-}
-
-export default ContactJato;
+};

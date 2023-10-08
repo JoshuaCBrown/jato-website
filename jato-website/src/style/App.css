@@ -282,6 +282,14 @@ div.social-links-div img {
   height: 50px;
 }
 
+.back-btn {
+
+}
+
+.back-btn image {
+  width: 20px;
+  height: auto;
+}
 
 
 @media (height > 1080px) {

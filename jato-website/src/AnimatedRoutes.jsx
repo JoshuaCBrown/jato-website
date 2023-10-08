@@ -15,6 +15,7 @@ import Press from "./sections/JatoPress";
 import Merch from "./sections/JatoMerch";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+import FormSuccess from "./sections/FormSuccess";
 // import "./style/App.css"
 function AnimatedRoutes() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function AnimatedRoutes() {
             <Route path="watchjato" element={<Watch />} />
             <Route path="jatomerch" element={<Merch />} />
             <Route path="jatopress" element={<Press />} />
+            <Route path="formsuccess" element={<FormSuccess />} />
           </Routes>
       </AnimatePresence>
     </>

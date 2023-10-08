@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import backImg from "../imgs/nav/back0.png"
 // import "./style/About.css";
 
 function PageDisplay({ jatoTitle, jatoPage, jatoBg }) {
@@ -20,7 +21,9 @@ function PageDisplay({ jatoTitle, jatoPage, jatoBg }) {
             <div className="jato-content">
               <div className="content-title-header">
                 <Link to="/">
-                  <button>&lt;--</button>
+                  <button className="back-btn">
+                    <img src={backImg} alt="Go back/Exit" />
+                  </button>
                 </Link>
                 <h1>{jatoTitle}</h1>
                 <div></div>

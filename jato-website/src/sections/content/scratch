@@ -1,0 +1,37 @@
+  return (
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* action="https://api.web3forms.com/submit" method="POST"> */}
+        <input
+          type="hidden"
+          name="access_key"
+          value="3216493-1580-4149-90d6-6ec48ac7e968"
+          {...register("access_key")}
+        />
+       {/* <input type="hidden" name="subject" value="JATO.com" {...register("subject")} /> */}
+        <div>
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" {...register("subject")} >
+            <option value="booking">Booking</option>
+            <option value="collab">Collab</option>
+            <option value="licensing">Licensing</option>
+            <option value="business">Other business related inquiry</option>
+            <option value="hi">Just saying hi</option>
+            <option value="other">Other/etc.</option>
+            <option value="feedback">General feedback</option>
+          </select>
+        </div>
+        <div>
+          <label for="email">Email </label>
+          <input type="email" id="email" name="email" required {...register("email")}/>
+        </div>
+        <div>
+          <label for="message">Message </label>
+          <textarea name="message" id="message" rows="10" cols="30" {...register("message")} required ></textarea>
+        </div>
+        <input type="checkbox" name="botcheck" id="" className="botfilt" />
+        <button type="submit" onClick={formValidation}>Send</button>
+      </form>
+    </>
+  );
+}
