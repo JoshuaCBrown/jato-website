@@ -93,10 +93,10 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
             key={item.liKey}
           >
             <Link to={item.imgLink}>
-            <img src={item.imgSrc} className="navimg" alt={item.imgAlt} />
-            {/* <motion.img
+            {/* <img src={item.imgSrc} className="navimg" alt={item.imgAlt} /> */}
+            <motion.img
                 src={item.imgSrc}
-                className="navimg"
+                className={imgVisibility(item.imgId)}
                 alt={item.imgAlt}
                 layout
                 transition={{
@@ -106,7 +106,7 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
                     ease: 'easeOut',
                   }
                 }}
-              /> */}
+              />
             </Link>
           </div>
         </motion.li>
