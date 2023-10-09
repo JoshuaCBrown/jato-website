@@ -34,7 +34,7 @@ function PageDisplay({ jatoTitle, jatoPage, jatoBg }) {
           </motion.div>
           <motion.div
             initial={{ opacity: 1 }}
-            animate={{ opacity: 0.2 }}
+            animate={{ opacity: 0.1 }}
             layout
             exit={{ opacity: 0 }}
             transition={{

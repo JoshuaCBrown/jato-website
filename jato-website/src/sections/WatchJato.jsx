@@ -1,9 +1,17 @@
 import { React, useState } from "react";
+import lookImg from "../imgs/new/watchscl.png";
+import PageDisplay from "./PageDisplay";
+import WatchContent from "../sections/content/WatchContent";
 
 function Watch() {
+  const watchContent = <WatchContent />;
   return (
     <>
-      <h1>Watch Jack and the Other</h1>
+      <PageDisplay
+        jatoTitle="Look"
+        jatoPage={watchContent}
+        jatoBg={lookImg}
+      />
     </>
   );
 }

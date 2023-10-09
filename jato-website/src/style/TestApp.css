@@ -88,7 +88,7 @@ div {
 
 .homemenu>ul,
 .container>.inner {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   box-sizing: border-box;
   display: grid;
   align-items: center;
@@ -130,7 +130,7 @@ div {
 .content-div {
   grid-area: 1 / 1 / -1 / -1;
   align-self: start;
-  border: red solid 3px;
+  /* border: red solid 3px; */
 }
 
 
@@ -209,6 +209,8 @@ div {
   height: auto;
   width: auto;
   max-width: 750px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px grey;
   /* overflow: scroll; */
   /* border: 3px pink solid; */
 }
@@ -219,7 +221,8 @@ div {
   width: 100svw;
   /* flex-grow: 1; */
   /* overflow-y: scroll; */
-  background-color:rgba(0, 0, 0, 0.15);
+  /* background-color:rgba(0, 0, 0, 0.15); */
+  /* background-color: rgba(245, 245, 245, 0.288); */
   border-radius: 20px;
   padding: 10px;
   z-index: 1000;

@@ -1,0 +1,43 @@
+.soundcloud-container,
+.spotify-container,
+.apple-container {
+  margin: 0 20px;
+}
+
+.soundcloud-container {
+  border-top: black 2px solid;
+}
+/* .music-players:first-child {
+  border-top: black 2px solid;
+} */
+
+.cover-div {
+  overflow: hidden;
+}
+.player-control {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: black 2px solid;
+  position: relative;
+}
+
+.player-control:hover {
+  background: linear-gradient(#a5beca54, rgba(245, 245, 245, 0.404));
+}
+
+img.arrow-img {
+  justify-self: flex-end;
+  height: 50px;
+  width: 50px;
+}
+
+.down-arrow {
+  transform: rotate(-90deg);
+}
+
+.left-arrow {
+  transform: rotate(0deg);
+}
