@@ -1,3 +1,19 @@
+  About
+  Media/watch
+  Listen
+  Press
+  Merch 
+  Contact
+
+  Carousel for merch images
+  
+  more creative use and transitions 
+
+  media player in tv image 
+  
+  
+  
+  
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>

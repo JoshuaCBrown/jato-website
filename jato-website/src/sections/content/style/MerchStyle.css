@@ -1,0 +1,82 @@
+div.redbubble {
+  min-height: 100%;
+  width: 100%;
+  /* border: 2px white solid; */
+  height: auto;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  align-content: center;
+  /* padding: 10px; */
+  box-sizing: border-box;
+  /* justify-items: center; */
+}
+
+.redbubble>div {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* border: green 2px solid; */
+  height: max-content;
+  align-self: center;
+  justify-content: center;
+  /* justify-self: stretch; */
+  /* align-self: center; */
+  /* justify-content: space-around; */
+  /* position: relative; */
+}
+
+div.hover-div {
+  height: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: green 2px solid; */
+  transform: scale(1.0);
+  z-index: 0;
+  box-shadow: none;
+}
+
+div.hover-div:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  transition: .4s all;
+  /* box-shadow: 2px 2px 2px black; */
+}
+
+.redbubble img {
+  display: block;
+  border: 1px solid lightgray;
+  max-width: 225px;
+  height: auto;
+}
+
+.redbubble a:hover {
+  opacity: 100;
+}
+
+div.hover-div::before {
+  content: "Click to shop";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* align-self: center; */
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+  opacity: 0;
+}
+
+div.hover-div:hover::before {
+  
+  opacity: 70%;
+  transition: .5s all;
+}
+
+/* .redbubble img:hover {
+  filter: grayscale(1);
+} */
+
+

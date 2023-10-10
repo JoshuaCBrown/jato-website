@@ -1,9 +1,18 @@
 import { React, useState } from "react";
 import { motion } from "framer-motion";
+import merchImg from "../imgs/new/merchscl.png";
+import PageDisplay from "./PageDisplay";
+import MerchContent from "../sections/content/MerchContent";
+
 function Merch() {
+  const merchContent = <MerchContent />;
   return (
     <>
-      <h1>Merch</h1>
+      <PageDisplay
+        jatoTitle="Merch"
+        jatoPage={merchContent}
+        jatoBg={merchImg}
+      />
     </>
   );
 }

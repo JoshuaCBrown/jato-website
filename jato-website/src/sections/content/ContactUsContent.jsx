@@ -1,6 +1,7 @@
 // import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import { redirect, useNavigate } from "react-router-dom";
+import "./style/ContactUs.css"
 
 export default function ContactUsContent() {
   const [result, setResult] = useState("");
@@ -41,6 +42,10 @@ export default function ContactUsContent() {
       ) : (
         <div className="contact-form">
           <form onSubmit={onSubmit}>
+          <div>
+              <label htmlFor="email">Email </label>
+              <input type="email" id="email" name="email" required />
+            </div>
             <div>
               <label htmlFor="subject">Subject</label>
               <select id="subject" name="subject" required>
@@ -53,10 +58,7 @@ export default function ContactUsContent() {
                 <option value="feedback">General feedback</option>
               </select>
             </div>
-            <div>
-              <label htmlFor="email">Email </label>
-              <input type="email" id="email" name="email" required />
-            </div>
+            
             <div>
               <label htmlFor="message">Message </label>
               <textarea

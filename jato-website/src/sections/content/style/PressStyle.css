@@ -1,0 +1,9 @@
+.press-links-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.press-link h2 {
+  font-size: 20px;
+}
