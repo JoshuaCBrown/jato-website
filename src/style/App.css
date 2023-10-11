@@ -141,6 +141,8 @@ div {
 
 .navdiv,
 .content-div {
+  /* position: relative; */
+  /* border: black 2px solid; */
   align-self: start;
   justify-self: center;
   display: flex;
@@ -149,6 +151,7 @@ div {
   justify-content: center;
   margin: 0;
   padding: 0;
+
   /* overflow: hidden; */
 }
 
@@ -191,14 +194,45 @@ div {
 }
 
 .navimg {
-  opacity: .5;
+  opacity: 1;
 }
 
 .navimg:hover {
-  opacity: 1;
+  opacity: .4;
   transition: all 0.5s;
 }
 
+/* .hoverino {
+  position: absolute;
+  display: flex;
+  border: 2px solid green;
+  top: 0;
+  left: 0;
+} */
+
+h2.cat-title {
+  position: absolute;
+  align-self: center;
+  font-size: 2rem;
+  opacity: 0; 
+  cursor:pointer; 
+  text-shadow: 4px 5px 10px rgb(194, 194, 194);
+  /* text-shadow: 0px -3px 5px rgb(255, 166, 0); */
+  color: #282828;
+  font-weight: bolder;
+}
+
+
+.navdiv:hover .navimg {
+  opacity: .4;
+  transition: .5s all;
+}
+
+.navdiv:hover h2.cat-title {
+  opacity: 1;
+  /* text-shadow: 0; */
+  transition: .5s all;
+}
 
 .content-container {
   grid-area: 1 / 1 / -1 / -1;
@@ -248,7 +282,7 @@ div {
 }
 
 .content-title-header div {
- 
+
 }
 
 .content-title-header h1 {
@@ -260,20 +294,21 @@ div {
 .back-btn {
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: center;
   margin: 0;
   padding: 0;
   border-radius: 50%;
   /* align-self: end; */
-  /* border: black 1px dotted; */
-  height: 75px;
-  width: 75px;
+  border: black 1px dotted;
+  height: 35px;
+  width: 35px;
   background-color: transparent;
 }
 
 .back-btn > img {
-  width: 75px;
-  height: auto;
+  width: 50px;
+  height: 50px;
 }
 
 .content-title-header button:hover {

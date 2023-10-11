@@ -17,7 +17,7 @@ import Merch from "./sections/JatoMerch";
 import SocialLinks from "./SocialLinks";
 import headerImg from "./imgs/titleheadertwo.png";
 import AnimatedRoutes from "./AnimatedRoutes";
-import "./style/TestApp.css";
+import "./style/App.css";
 import { motion } from "framer-motion";
 
 function App() {

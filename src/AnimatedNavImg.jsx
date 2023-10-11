@@ -15,8 +15,8 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
   };
 
   const exitVariant = {
-    opacity: <div className="5"></div>
-  }
+    opacity: <div className="5"></div>,
+  };
 
   const selectedVariant = {
     initial: { opacity: 0 },
@@ -30,7 +30,7 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
         duration: 3,
       },
     },
-    transition: { duration: 4 }
+    transition: { duration: 4 },
   };
 
   const unselectedVariant = {
@@ -40,6 +40,12 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
     transition: {
       type: "spring",
       duration: 4,
+    },
+  };
+
+  const opacityVariants = {
+    hover: {
+      opacity: 0,
     },
   };
 
@@ -65,7 +71,7 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
 
   return (
     <ul>
-      {imgs.map((item) => (
+      {imgs.map((item, i) => (
         <motion.li
           key={item.imgId}
           className={itemVisibility(item.imgId)}
@@ -76,39 +82,53 @@ function AnimatedNavImg({ imgs, clickHandler, userChoice, choiceMade }) {
           // }
           layout
           transition={{
-            duration: .5,
+            duration: 0.5,
             layout: {
-              duration: .5,
-              ease: 'easeOut',
-            }
+              duration: 0.5,
+              ease: "easeOut",
+            },
           }}
           exit={{ opacity: 1 }}
           // exit={exitLayout(item.imgId)}
           // transition={{ duration: 3 }}
         >
-          <div
-            className="navdiv"
-            onClick={() => clickHandler(item.imgId)}
-            hovertitle={item.hoverTitle}
-            key={item.liKey}
-          >
-            <Link to={item.imgLink}>
-            {/* <img src={item.imgSrc} className="navimg" alt={item.imgAlt} /> */}
-            <motion.img
+          <Link to={item.imgLink}>
+            <motion.div
+              className="navdiv"
+              onClick={() => clickHandler(item.imgId)}
+              // hovertitle={item.hoverTitle}
+              key={item.liKey}
+              initial={{ y: -500, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 - i * 0.1 }}
+              whileHover="hover"
+            >
+              {/* <img src={item.imgSrc} className="navimg" alt={item.imgAlt} /> */}
+              <motion.img
                 src={item.imgSrc}
                 className={imgVisibility(item.imgId)}
                 alt={item.imgAlt}
                 layout
                 transition={{
-                  duration: .5,
+                  duration: 0.5,
                   layout: {
-                    duration: .5,
-                    ease: 'easeOut',
-                  }
+                    duration: 0.5,
+                    ease: "easeOut",
+                  },
                 }}
               />
-            </Link>
-          </div>
+
+              {/* <motion.div
+                className="hoverino"
+                whileHover={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              > */}
+                <h2 className="cat-title">{choiceMade === true ? '' : item.hoverTitle}</h2>
+              {/* </motion.div> */}
+            </motion.div>
+          </Link>
         </motion.li>
       ))}
     </ul>

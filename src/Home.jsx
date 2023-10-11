@@ -20,12 +20,12 @@ function Home() {
       liKey: "aboutLi",
     },
     {
-      imgLink: "contactjato",
-      imgSrc: contactImg,
-      imgAlt: "Contact Jack and the Other",
-      imgId: "contactjato",
-      hoverTitle: "Contact",
-      liKey: "contactLi",
+      imgLink: "watchjato",
+      imgSrc: watchImg,
+      imgAlt: "Watch Jack and the Other",
+      imgId: "watchjato",
+      hoverTitle: "Look",
+      liKey: "lookLi",
     },
     {
       imgLink: "listentojato",
@@ -36,13 +36,15 @@ function Home() {
       liKey: "listenLi",
     },
     {
-      imgLink: "watchjato",
-      imgSrc: watchImg,
-      imgAlt: "Watch Jack and the Other",
-      imgId: "watchjato",
-      hoverTitle: "Look",
-      liKey: "lookLi",
+      imgLink: "jatopress",
+      imgSrc: pressImg,
+      imgAlt: "Jack and the Other Press",
+      imgId: "jatopress",
+      hoverTitle: "Press",
+      liKey: "pressLi",
     },
+
+  
     {
       imgLink: "jatomerch",
       imgSrc: merchImg,
@@ -52,13 +54,15 @@ function Home() {
       liKey: "merchLi",
     },
     {
-      imgLink: "jatopress",
-      imgSrc: pressImg,
-      imgAlt: "Jack and the Other Press",
-      imgId: "jatopress",
-      hoverTitle: "Press",
-      liKey: "pressLi",
+      imgLink: "contactjato",
+      imgSrc: contactImg,
+      imgAlt: "Contact Jack and the Other",
+      imgId: "contactjato",
+      hoverTitle: "Contact",
+      liKey: "contactLi",
     },
+
+
   ]);
 
   const [userChoice, setUserChoice] = useState("");
